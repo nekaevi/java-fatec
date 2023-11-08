@@ -51,20 +51,6 @@ public class Carro {
 	        }
 	    }
 	    
-	    public void setCombustivel(double combustivel) {
-	        if (combustivel <= this.tanque) {
-	            this.combustivel = combustivel;
-	        }
-	    }
-
-	    public double getVelocidade() {
-	        return this.velocidade;
-	    }
-
-	    public boolean isMotorLigado() {
-	        return this.girarChave;
-	    }
-
 }
 
 
