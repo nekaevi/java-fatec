@@ -17,8 +17,23 @@ public class Produtos {
 	public String getTipo() {
 		return tipo;
 	}
-	public double getPreco(double preco) {
-		return preco;
+    public double getPreco() {
+        return preco;
+    }
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	private static void ligar() {
+		System.out.println("Ligando o Servidor");
+		System.out.println("Servidor Ligado");
+		// Lógica para apagar tabela do banco de dados
+	}
+	
+	private static void Conectar() {
+		System.out.println("Conectando a rede...");
+		System.out.println("Conectado");
+		// Lógica para subir a aplicação para produção
 	}
 	
 	public void Mostrar() {
@@ -28,6 +43,7 @@ public class Produtos {
 	}
 
 }
+
 package cadastro.produtos;
 
 public class Eletronico extends Produtos {
@@ -54,6 +70,9 @@ import java.util.ArrayList;
 public class Principal {
 
 	public static void main(String[] args) {
+		Conectar();
+		ligar();
+
 		ArrayList<Produtos> produtos = new ArrayList<>();
 		
 		produtos.add(new Produtos("Cetim", "Tecido", 12.0 ));
@@ -63,6 +82,7 @@ public class Principal {
 			prod.Mostrar();
 			System.out.println("-------");
 		}
+
 
 	}
 
